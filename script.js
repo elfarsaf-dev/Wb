@@ -225,7 +225,7 @@ const backgroundMusic = document.getElementById('backgroundMusic');
 const musicIcon = musicPlayer.querySelector('.music-icon');
 
 let isPlaying = false;
-const musicSource = 'https://cdn.ferdev.my.id/cdn/t3yfw.mp3'; // Default music
+const musicSource = 'https://github.com/elfarsaf-dev/Wb/raw/refs/heads/main/video%20(5).mp3'; // Default music
 backgroundMusic.src = musicSource; // Set source on load
 
 musicPlayer.addEventListener('click', function() {
