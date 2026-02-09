@@ -226,6 +226,7 @@ const musicIcon = musicPlayer.querySelector('.music-icon');
 
 let isPlaying = false;
 const musicSource = 'https://cdn.ferdev.my.id/cdn/t3yfw.mp3'; // Default music
+backgroundMusic.src = musicSource; // Set source on load
 
 musicPlayer.addEventListener('click', function() {
   if (isPlaying) {
@@ -236,16 +237,14 @@ musicPlayer.addEventListener('click', function() {
 });
 
 function playMusic() {
-  if (musicSource && backgroundMusic.src !== musicSource) {
-    backgroundMusic.src = musicSource;
-  }
-  
   backgroundMusic.play().then(() => {
     isPlaying = true;
     musicPlayer.classList.add('playing');
     musicIcon.name = 'pause';
   }).catch(error => {
     console.log('Music playback failed:', error);
+    // User interaction is required for audio playback in most browsers
+    alert("Silakan klik lagi untuk memutar musik (kebijakan browser)");
   });
 }
 
