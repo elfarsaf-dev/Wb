@@ -1169,6 +1169,55 @@ main {
   margin-top: 5px;
 }
 
+/* Empty Project State */
+.empty-project-state {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 48px 24px;
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+.empty-project-state::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.empty-icon-box {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--bg-gradient-blue-1);
+  color: var(--neon-blue);
+  font-size: 32px;
+  box-shadow: var(--shadow-1);
+}
+
+.empty-title {
+  color: var(--white-2);
+  margin-bottom: 8px;
+  font-size: var(--fs-3);
+}
+
+.empty-text {
+  color: var(--light-gray-70);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
 /* Contact Section */
 .mapbox {
   position: relative;
